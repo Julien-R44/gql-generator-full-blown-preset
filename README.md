@@ -1,6 +1,6 @@
 # gql-generator-full-blown-preset
 
-🛩 A cool and opinionated base configuration for graphql-code-generator. 
+🛩 A cool and opinionated base configuration for [Graphql Code Generator](https://www.graphql-code-generator.com/). 
 
 ## Features
 - Generates a base `schema.graphql` file using [`@graphql-codegen/schema-ast`](https://www.graphql-code-generator.com/plugins/schema-ast)
@@ -28,7 +28,6 @@ require("dotenv").config();
 const defineConfig = require("@julr/gql-generator-full-blown-preset");
 
 module.exports = defineConfig({
-  
   // The path to your GraphQL schema file. Can be a local file or a remote URL.
   schema: {
     url: process.env.HASURA_URL,
