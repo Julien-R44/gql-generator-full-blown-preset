@@ -25,11 +25,23 @@ public-hoist-pattern[]=@graphql-codegen/*
 Create a `graphql.config.js` file in the root of your project.
 ```js
 require("dotenv").config();
-const generate = require("gql-generator-full-blown-preset/src/index");
+const defineConfig = require("@julr/gql-generator-full-blown-preset");
 
-module.exports = generate({
-  url: process.env.HASURA_URL,
-  secret: process.env.HASURA_SECRET,
+module.exports = defineConfig({
+  
+  // The path to your GraphQL schema file. Can be a local file or a remote URL.
+  schema: {
+    url: process.env.HASURA_URL,
+    secret: process.env.HASURA_SECRET,
+  },
+
+  // Since we're using graphql-config, you may need to define 
+  // additional extensions configurations
+  additionalExtensions: {
+    myExtension: {
+      config: 'foo'
+    }
+  }
 });
 ```
 
