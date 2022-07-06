@@ -1,7 +1,7 @@
 {
   "name": "@julr/gql-generator-full-blown-preset",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@7.0.1",
   "description": "🛩 A cool and opinionated base configuration for graphql-code-generator.",
   "keywords": [
